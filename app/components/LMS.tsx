@@ -4,15 +4,14 @@ const courses = ["Business Analysis", "Design Thinking", "Effective Communicatio
 
 export default function LMS() {
   return (
-    <section style={{ background: "#F5EEF5", padding: "80px 24px" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
-        
-        {/* Left: circular image */}
-        <div style={{ display: "flex", justifyContent: "center" }}>
+    <section className="section-inner" style={{ background: "#F5EEF5" }}>
+      <div className="container grid-2">
+        <div className="centered-block">
           <div style={{
             width: 340, height: 340, borderRadius: "50%", overflow: "hidden",
             border: "6px solid #fff",
             boxShadow: "0 20px 60px rgba(74,0,53,0.15)",
+            flexShrink: 0,
           }}>
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80"
@@ -24,8 +23,7 @@ export default function LMS() {
           </div>
         </div>
 
-        {/* Right: content */}
-        <div>
+        <div style={{ width: "100%", maxWidth: 600 }}>
           <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 700, color: "#4A0035", marginBottom: 20, lineHeight: 1.2 }}>
             Learning Management System
           </h2>

@@ -23,9 +23,9 @@ export default function ExtraPrograms() {
   return (
     <>
       {/* Transformation Hub */}
-      <section style={{ padding: "80px 24px", background: "#FDF0F8" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ background: "#FDE8F5", borderRadius: 16, padding: "44px 48px", boxShadow: "0 4px 24px rgba(74,0,53,0.07)" }}>
+      <section className="section-inner" style={{ background: "#FDF0F8" }}>
+        <div className="container">
+          <div className="card card-soft" style={{ padding: "44px 48px", boxShadow: "0 4px 24px rgba(74,0,53,0.07)" }}>
             <div className="section-label" style={{ marginBottom: 8 }}>Learning With Our CEO:</div>
             <h2 style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)", fontStyle: "italic", fontWeight: 600, color: "#2E001F", marginBottom: 16 }}>
               Transformation Hub With Jite Newton
@@ -37,25 +37,25 @@ export default function ExtraPrograms() {
               or enhance your leadership skills, the Transformation Hub provides a transformative learning experience.
             </p>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 36, alignItems: "start" }}>
-              <div style={{ borderRadius: 12, overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.15)" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 36, alignItems: "stretch" }}>
+              <div className="card card-glow">
                 <Image
                   src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=700&q=80"
                   alt="Transformation Hub"
                   width={500}
                   height={280}
-                  style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }}
+                  style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}
                 />
               </div>
 
               <div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
+                <div className="pill-grid" style={{ marginBottom: 24 }}>
                   {hubSkills.map((s) => (
                     <div key={s.label} style={{
                       display: "flex", alignItems: "center", gap: 8,
                       background: "#fff", border: "1px solid #E8D0E0",
                       borderRadius: 8, padding: "10px 14px",
-                      fontSize: 13, color: "#333", fontWeight: 500,
+                      fontSize: "clamp(12px, 2vw, 13px)", color: "#333", fontWeight: 500,
                     }}>
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="#4A0035"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                       {s.label}
@@ -73,8 +73,8 @@ export default function ExtraPrograms() {
       </section>
 
       {/* Training The Consultant */}
-      <section style={{ padding: "80px 24px", background: "#F5F5F5" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section className="section-inner" style={{ background: "#F5F5F5" }}>
+        <div className="container">
           <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 700, color: "#1A1A1A", marginBottom: 6 }}>
             Training The Consultant
           </h2>
@@ -88,11 +88,7 @@ export default function ExtraPrograms() {
             others in their career advancement.
           </p>
 
-          <div style={{
-            background: "linear-gradient(135deg, #3D0030 0%, #5C0048 100%)",
-            borderRadius: 12, padding: "36px 40px", marginBottom: 32,
-            display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32,
-          }}>
+          <div className="card card-dark" style={{ padding: "36px 40px", marginBottom: 32, display: "flex", flexDirection: "column", gap: 32 }}>
             {consultantBenefits.map((b) => (
               <div key={b.title}>
                 <h4 style={{ fontSize: 14, fontWeight: 700, color: "#fff", marginBottom: 8, fontFamily: "Plus Jakarta Sans, sans-serif" }}>{b.title}</h4>

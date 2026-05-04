@@ -42,28 +42,16 @@ export default function CtaAndTestimonials() {
   return (
     <>
       {/* CTA Banner */}
-      <section style={{ padding: "60px 24px", background: "#fff" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{
-            background: "linear-gradient(135deg, #3D0030 0%, #5C0048 100%)",
-            borderRadius: 14, padding: "48px 40px", textAlign: "center",
-          }}>
+      <section className="section-inner" style={{ background: "#fff" }}>
+        <div className="container">
+          <div className="cta-banner">
             <p style={{ fontSize: 16, color: "rgba(255,255,255,0.8)", marginBottom: 8, fontWeight: 400 }}>
               Want to accelerate professional growth and development at your organisation?
             </p>
             <p style={{ fontSize: 17, color: "#fff", fontWeight: 600, marginBottom: 28 }}>
               See how we can help.
             </p>
-            <a href="#" style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              background: "transparent", color: "#fff",
-              border: "1.5px solid rgba(255,255,255,0.6)",
-              padding: "12px 28px", borderRadius: 8,
-              fontSize: 14, fontWeight: 600,
-              fontFamily: "Plus Jakarta Sans, sans-serif",
-              textDecoration: "none",
-              transition: "all 0.2s",
-            }}>
+            <a href="#" className="btn-outline" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.6)", borderWidth: 1.5 }}>
               Book a Consultation
             </a>
           </div>
@@ -71,15 +59,12 @@ export default function CtaAndTestimonials() {
       </section>
 
       {/* Testimonials */}
-      <section style={{ padding: "80px 24px", background: "#fff" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section className="section-inner" style={{ background: "#fff" }}>
+        <div className="container">
           <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 700, textAlign: "center", color: "#1A1A1A", marginBottom: 48 }}>
             Testimonials
           </h2>
-          <div style={{
-            display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: 20,
-          }}>
+          <div className="testimonial-grid">
             {testimonials.map((t) => (
               <div key={t.name} style={{
                 background: "#FDF5FB",

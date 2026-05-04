@@ -18,10 +18,10 @@ export default function Footer() {
   return (
     <footer>
       {/* CTA Strip */}
-      <div style={{ background: "#F5EEF5", padding: "36px 40px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid #E0D0DC" }}>
-        <div>
-          <p style={{ fontSize: 13.5, color: "#555", marginBottom: 6, fontWeight: 400 }}>Ready to be a part of something extraordinary?</p>
-          <h3 style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", fontWeight: 700, color: "#1A1A1A" }}>
+      <div style={{ background: "#F5EEF5", padding: "clamp(24px, 6vw, 36px) clamp(16px, 4vw, 40px)", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid #E0D0DC", flexDirection: "column", gap: "24px" }}>
+        <div style={{ width: "100%", textAlign: "center" }}>
+          <p style={{ fontSize: "clamp(12px, 3vw, 13.5px)", color: "#555", marginBottom: 6, fontWeight: 400 }}>Ready to be a part of something extraordinary?</p>
+          <h3 style={{ fontSize: "clamp(1rem, 5vw, 1.5rem)", fontWeight: 700, color: "#1A1A1A" }}>
             Let&rsquo;s work together to create a difference
           </h3>
         </div>
@@ -29,8 +29,8 @@ export default function Footer() {
       </div>
 
       {/* Main footer */}
-      <div style={{ background: "#1C0014", padding: "60px 40px 40px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1.6fr 1.4fr 1fr 1fr", gap: 48 }}>
+      <div style={{ background: "#1C0014", padding: "clamp(40px, 10vw, 60px) clamp(16px, 4vw, 40px) clamp(24px, 6vw, 40px)" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "clamp(24px, 8vw, 48px)" }}>
           
           {/* Brand col */}
           <div>
@@ -102,11 +102,11 @@ export default function Footer() {
 
         {/* Registered Offices */}
         <div style={{
-          maxWidth: 1100, margin: "48px auto 0",
-          background: "rgba(255,255,255,0.06)", borderRadius: 10, padding: "28px 32px",
-          display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 40,
+          maxWidth: 1100, margin: "clamp(32px, 8vw, 48px) auto 0",
+          background: "rgba(255,255,255,0.06)", borderRadius: 10, padding: "clamp(20px, 5vw, 28px) clamp(16px, 4vw, 32px)",
+          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "clamp(24px, 8vw, 40px)",
           border: "1px solid rgba(255,255,255,0.08)"
-        }}>
+        } as any}>
           <div>
             <h5 style={{ fontSize: 13.5, fontWeight: 700, color: "#fff", marginBottom: 14, fontFamily: "Plus Jakarta Sans, sans-serif" }}>Registered Offices</h5>
             <div>
@@ -141,11 +141,11 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{
-          maxWidth: 1100, margin: "32px auto 0", paddingTop: 24,
+          maxWidth: 1100, margin: "clamp(20px, 5vw, 32px) auto 0", paddingTop: "clamp(16px, 4vw, 24px)",
           borderTop: "1px solid rgba(255,255,255,0.08)",
-          display: "flex", alignItems: "center", justifyContent: "space-between",
-        }}>
-          <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.35)", fontWeight: 400 }}>
+          display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: "12px", textAlign: "center"
+        } as any}>
+          <p style={{ fontSize: "clamp(11px, 2vw, 12.5px)", color: "rgba(255,255,255,0.35)", fontWeight: 400 }}>
             Copyright © Tobams Group, {new Date().getFullYear()}. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: 24 }}>
